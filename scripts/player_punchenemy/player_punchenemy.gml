@@ -1,0 +1,21 @@
+function player_punchenemy()
+{
+	image_speed = 0.35
+	hsp = approach(hsp, 0, 0.4)
+	movespeed = 0
+	
+	var ixcheck = 5
+	if sprite_index == spr_player_swingdingend
+		ixcheck = 1
+	
+	if (floor(image_index) == ixcheck)
+	{
+		hsp = xscale * -5
+		vsp = -1
+	}
+	
+	if anim_ended()
+		state = states.normal
+		
+	aftimg_timers.mach.do_it = false
+}
